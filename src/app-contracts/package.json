@@ -14,20 +14,22 @@
     "ethereumjs-testrpc": "^3.0.5",
     "fs-extra-promise": "^1.0.1",
     "is-port-reachable": "^2.0.0",
+    "scrypt": "^6.0.3",
     "truffle": "^3.2.1"
   },
   "scripts": {
-    "install": "yarn run truffle compile",
-    "test": "yarn run truffle test",
+    "install": "node truffle compile",
+    "test": "node truffle test",
     "deploy-ropsten": "node deploy/ropsten.js",
     "deploy-rinkeby": "node deploy/rinkeby.js",
-    "rpc": "yarn run testrpc -- -m 'blue clump mutual physical hair vital code indoor minor tongue neglect seed'",
-    "rpc-testnet": "yarn run testrpc -- -f http://localhost:8546 -m 'blue clump mutual physical hair vital code indoor minor tongue neglect seed'"
+    "rpc": "testrpc -- -m 'blue clump mutual physical hair vital code indoor minor tongue neglect seed'",
+    "rpc-testnet": "node testrpc -- -f http://localhost:8546 -m 'blue clump mutual physical hair vital code indoor minor tongue neglect seed'"
   },
   "engines": {
     "node": ">=7.6.0"
   },
   "dependencies": {
-    "chai-as-promised": "^6.0.0"
+    "chai-as-promised": "^6.0.0",
+    "truffle-contract": "^2.0.1"
   }
 }
