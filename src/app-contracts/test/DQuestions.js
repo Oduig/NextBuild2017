@@ -11,6 +11,7 @@ contract('DQuestions', function (accounts) {
   })
 
   it('can be constructed', async function () {
+    // noinspection BadExpressionStatementJS
     expect(questions).to.exist
   })
 
