@@ -32,7 +32,7 @@ class ShowQuestion extends React.Component {
   render () {
     return <div className='show-question'>
       <h2>{ this.state.question }</h2>
-      <Form horizontal>
+      <Form horizontal action='' method='get'>
         <FormGroup>
           <Col sm={2} componentClass={ControlLabel}>Take a guess:</Col>
           <Col sm={10}>
@@ -48,6 +48,7 @@ class ShowQuestion extends React.Component {
         <FormGroup>
           <Col smOffset={2} sm={10}>
             <Button
+              type='submit'
               bsStyle='primary'
               bsSize='large'
               loading={this.state.isLoading}

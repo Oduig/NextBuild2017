@@ -17,7 +17,7 @@ class NewQuestion extends React.Component {
   render () {
     return <div>
       <h2>Create a New Question</h2>
-      <Form horizontal>
+      <Form horizontal action='' method='get'>
         <FormGroup>
           <Col sm={2} componentClass={ControlLabel}>Question</Col>
           <Col sm={10}>
@@ -45,6 +45,7 @@ class NewQuestion extends React.Component {
         <FormGroup>
           <Col smOffset={2} sm={10}>
             <Button
+              type='submit'
               bsStyle='primary'
               bsSize='large'
               loading={this.state.isLoading}

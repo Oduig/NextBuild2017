@@ -24,12 +24,11 @@
   "scripts": {
     "postinstall": "local_modules install --force --dir src",
     "devsetup": "npm install && local_modules link --force --dir .\\src && ( cd src/app-contracts && npm install ) && ( cd src/app-webapp && npm install )",
-    "test": "eslint . && ( cd src/app-contracts && npm test ) && ( cd src/app-webapp && npm test ) && ( cd src/app-restserver && npm test )"
+    "test": "eslint . && ( cd src/app-contracts && npm test ) && ( cd src/app-webapp && npm test )"
   },
   "dependencies": {
     "local_modules": "^1.0.8",
     "app-contracts": "src/app-contracts",
-    "app-restserver": "src/app-restserver",
     "app-webapp": "src/app-webapp"
   },
   "main": "index.js"
